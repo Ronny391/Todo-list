@@ -20,7 +20,7 @@ int main() {
     fscanf(counter_file, "%d", &counter_task);
     fclose(counter_file);
   } else {
-    printf("ERORRE NEL COUNTER.TXT");
+    printf("ERRORE NEL COUNTER.TXT");
     fclose(counter_file);
     return 0;
   }
