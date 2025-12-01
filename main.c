@@ -16,13 +16,17 @@ int main() {
 
   // Verifico il counter in counter.txt
   FILE *counter_file = fopen("counter.txt", "r");
-  if (counter_file != NULL) {
+  if (counter_file == NULL) {
+    // File non esiste, crealo con valore 0
+    counter_file = fopen("counter.txt", "w");
+    if (counter_file != NULL) {
+      fprintf(counter_file, "0");
+      fclose(counter_file);
+    }
+    counter_task = 0;
+  } else {
     fscanf(counter_file, "%d", &counter_task);
     fclose(counter_file);
-  } else {
-    printf("ERRORE NEL COUNTER.TXT");
-    fclose(counter_file);
-    return 0;
   }
 
   while (1) {
