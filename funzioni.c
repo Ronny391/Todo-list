@@ -15,7 +15,7 @@ void aggiungi_task(int *task_counter) {
   fclose(counter_file);
 }
 
-void task_importante() {}
+void task_importante() { printf("non funziona"); }
 
 void modifica_task() {
   FILE *counter_file = fopen("counter.txt", "r");
@@ -75,10 +75,10 @@ void modifica_task() {
   rename("Todo_temp.txt", "Todo.txt");
 }
 
-void sovrascrivi_task() {}
-void elimina_task() {}
-void task_cominciata() {}
-void task_completata() {}
+void sovrascrivi_task() { printf("non funziona"); }
+void elimina_task() { printf("non funziona"); }
+void task_cominciata() { printf("non funziona"); }
+void task_completata() { printf("non funziona"); }
 
 void visualizza_tutto() {
   FILE *file = fopen("Todo.txt", "r");
